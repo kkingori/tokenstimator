@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+
+    <title>Tokenstimator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+        <h3 class="text-muted">Tokenstimator</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2>Expectations == Managed</h2>
+        <p class="lead"> Take the guesswork out of kplc prepaid token purchase. Tokenstimate instead and pay for only what you <strong>might</strong> get!</p>
+      </div>
+	  <div class='table-responsive'>
+		  <h3 class="text-center"> Unit Costs Breakdown</h3>
+		  <table class="table table-bordered">
+			  <tr class="active">
+				  <td><strong>Units Band</strong></td>
+				  <td><strong>Cost per Unit (Kshs)</strong></td>
+				  <td><strong>Units</strong></td>
+				  <td><strong>Charge (Kshs)</strong></td>
+			  </tr>
+			  <tr>
+			  	<td>0 - 50 </td>
+				<td> 2.50 </td>
+				<td>{{.FirstB}}</td>
+				<td>{{.FirstBand}}</td>
+			  </tr>
+			  <tr>
+			  	<td>51 - 1500 </td>
+				<td> 11.62 </td>
+				<td>{{.SecondB}}</td>
+				<td>{{.SecondBand}}</td>
+			  </tr>
+			  <tr>
+			  	<td>1501 > </td>
+				<td> 19.57 </td>
+				<td>{{.ThirdB}}</td>
+				<td>{{.ThirdBand}}</td>
+			  </tr>
+			  <tr>
+			  	<td></td>
+				<td class="info"> Totals </td>
+				<td class="info">{{.UnitsReq}}</td>
+				<td class="info">{{.UnitsCost}}</td>
+			  </tr>
+		  </table>
+	  </div>
+	  <br>
+	  <div class="table-responsive">
+		  <h3 class="text-center"> Total Costs Breakdown </h3>
+		  <table class="table table-bordered">
+			  <tr>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td class="active"><strong> Concept </strong></td>
+				  <td class="active"><strong> Charges (Kshs) </strong></td>
+			  </tr>
+			  <tr class="active">
+				  <td><strong> Charge </strong></td>
+				  <td><strong> Rate </strong></td>
+				  <td><strong> kWh purchased </strong></td>
+				  <td><strong> Fixed Charge </strong></td>
+				  <td>{{.Fixed}}</td> 
+			  </tr>
+			  <tr>
+				  <td></td>
+				  <td></td>
+				  <td>{{.UnitsReq}}</td>
+				  <td></td>
+				  <td>{{.UnitsCost}}</td>
+			  </tr>
+			  <tr>
+				  <td> Fuel Index Charge </td>
+				  <td>sh. 5.19/kWh</td>
+				  <td></td>
+				  <td></td>
+				  <td>{{.Fuel}}</td>
+			  </tr>
+			  <tr>
+				  <td> Forex Fluctuation Adjustment </td>
+				  <td> sh. 0.34/kWh</td>
+				  <td></td>
+				  <td></td>
+				  <td>{{.Forex}}</td>
+			  </tr>
+			  <tr>
+				  <td>Inflation Adjustment</td>
+				  <td> 0 </td>
+				  <td></td>
+				  <td></td>
+				  <td>{{.Inflation}}</td>
+			  </tr>
+			  <td><abbr title="Water Resources Management Authority">WRMA Levy</abbr></td>
+			  	<td> sh. 0.06/kWh</td>
+			  	<td></td>
+			  	<td></td>
+			  	<td>{{.Wrma}}</td>
+			  <tr>
+				  <td><abbr title="Rural Electrification Programme"> REP Levy</abbr></td>
+				  <td> 5%</td>
+				  <td></td>
+				  <td></td>
+				  <td>{{.Rep}}</td>
+			  </tr>
+			  <tr>
+				  <td><abbr title="Energy Regulatory Commission"> ERC Levy </abbr></td>
+				  <td>sh. 0.03/kWh</td>
+				  <td></td>
+				  <td></td>
+				  <td>{{.Erc}}</td>
+			  </tr>
+			  <tr>
+				  <td><abbr title="Value Added Tax"> VAT </abbr></td>
+				  <td> 16%</td>
+				  <td></td>
+				  <td></td>
+				  <td>{{.Vat}}</td>
+			  </tr>
+			  <tr>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td class="info"> Total Cost </td>
+				  <td class="info">{{.Total}}</td>
+			  </tr>
+			  <tr></tr>
+		  </table>
+	  </div>
+	  <br>
+	  <div class="centered">
+		  <ul>
+			  <li> Applies only to domestic consumers for supply provided and metered by KPLC at 240 or 415 volts and whose consumption does not exceed 15,000 Units per post-paid billing period or pre-paid units purchase period. </li>
+			  <li> Accurate only for the first payment of the month. Note that subsequent payments do not include the fixed charge, plus the pricing may roll over into the various unit price bands depending on number of previous units purchased in the month.  </li>
+			  <li> Add a fixed charge of sh 139.2 incl VAT for each previous month that no units were purchased. </li>
+		  </ul>
+	  </div>
+      <div class="footer">
+        <p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3 </a>| <a href="http://github.com/kkingori/tokenstimator">Fork me on Github</a></p> 
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+
+</body></html>
