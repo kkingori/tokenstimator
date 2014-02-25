@@ -41,21 +41,25 @@
         <h2>Manage expectations</h2>
         <p class="lead"> Take the guesswork out of kplc prepaid token purchase. Tokenstimate instead and pay for only what you <strong>might</strong> get!</p>
       </div>
-	  <div class="container">
-		<form role="form" class="col-xs-6 col-xs-offset-3" action="/reciept" method="post">
-			<div class="form-group">
-				<div class="input-group">
-					<span class="input-group-addon"> Units? </span>
-					<input type="text" class="form-control" name="unitsReq" placeholder="0.00">
-				</div>		
-			</div>
-			<div class="form-group">
-				<button type="submit" class="btn btn-primary col-xs-3 col-xs-offset-5"> Go </button>	
-			</div>
-		</form>	 
+	  <div class="container-fluid">
+		  <div class="container-fluid">
+			  <h4 class="text-center">In the current month is this?</h4>
+		  </div>
+		  <p>
+			  <br>
+		    <a href="/firstPurchase" class="btn btn-primary col-xs-offset-3 col-sm-offset-4 col-sm-3 col-md-3" role="button">The First Purchase</a>
+		  </p>
+		  <br><br>
+		  <p class="col-xs-offset-5 col-sm-offset-5">
+			 - Or -  
+		  </p>
+		  <br>
+		  <p>
+  		    <a href="/subsequentPurchase" class="btn btn-primary col-xs-offset-2 col-sm-offset-4" role="button">Subsequent Purchase</a>
+		  </p>	 
 		 
 	  </div>
-	  <br>
+	  <br><br>
       <div class="footer">
           <p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3 </a>| <a href="http://github.com/kkingori/tokenstimator">Fork me on Github</a></p> 
       </div>
