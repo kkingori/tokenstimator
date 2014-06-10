@@ -141,7 +141,7 @@ func charges(unitsReq float64, unitsCharge float64) (float64, float64, float64, 
 	const wrma float64 = 0.05
 	wrmaCharge := wrma * unitsReq
 	
-	const inflation float64 = 0
+	const inflation float64 = 0.09
 	inflationCharge := inflation * unitsReq
 	
 	const erc float64 = 0.03
@@ -162,7 +162,7 @@ func charges(unitsReq float64, unitsCharge float64) (float64, float64, float64, 
 	*/
 	
 	const vat float64 = 0.16
-	vatableTotal := fuelCharge + forexCharge + wrmaCharge + inflationCharge + fixedCharge + unitsCharge
+	vatableTotal := fuelCharge + forexCharge + fixedCharge + unitsCharge
 	vatCharge := vat * vatableTotal
 	
 	return fuelCharge, forexCharge, wrmaCharge, inflationCharge, fixedCharge, vatCharge, ercCharge, repCharge
@@ -179,7 +179,7 @@ func subsequentCharges(unitsReq float64, unitsCharge float64) (float64, float64,
 	const wrma float64 = 0.05
 	wrmaCharge := wrma * unitsReq
 	
-	const inflation float64 = 0
+	const inflation float64 = 0.09
 	inflationCharge := inflation * unitsReq
 	
 	const erc float64 = 0.03
@@ -200,7 +200,7 @@ func subsequentCharges(unitsReq float64, unitsCharge float64) (float64, float64,
 	*/
 	
 	const vat float64 = 0.16
-	vatableTotal := fuelCharge + forexCharge + wrmaCharge + inflationCharge + fixedCharge + unitsCharge
+	vatableTotal := fuelCharge + forexCharge + fixedCharge + unitsCharge
 	vatCharge := vat * vatableTotal
 	
 	return fuelCharge, forexCharge, wrmaCharge, inflationCharge, fixedCharge, vatCharge, ercCharge, repCharge
