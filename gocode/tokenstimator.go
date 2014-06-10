@@ -162,7 +162,7 @@ func charges(unitsReq float64, unitsCharge float64) (float64, float64, float64, 
 	*/
 	
 	const vat float64 = 0.16
-	vatableTotal := fuelCharge + forexCharge + fixedCharge + unitsCharge
+	vatableTotal := fuelCharge + forexCharge + inflationCharge + fixedCharge + unitsCharge
 	vatCharge := vat * vatableTotal
 	
 	return fuelCharge, forexCharge, wrmaCharge, inflationCharge, fixedCharge, vatCharge, ercCharge, repCharge
@@ -200,7 +200,7 @@ func subsequentCharges(unitsReq float64, unitsCharge float64) (float64, float64,
 	*/
 	
 	const vat float64 = 0.16
-	vatableTotal := fuelCharge + forexCharge + fixedCharge + unitsCharge
+	vatableTotal := fuelCharge + forexCharge + inflationCharge + fixedCharge + unitsCharge
 	vatCharge := vat * vatableTotal
 	
 	return fuelCharge, forexCharge, wrmaCharge, inflationCharge, fixedCharge, vatCharge, ercCharge, repCharge
