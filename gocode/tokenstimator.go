@@ -135,7 +135,7 @@ func charges(unitsReq float64, unitsCharge float64) (float64, float64, float64, 
 	const fcc float64 = 7.22
 	fuelCharge := fcc * unitsReq
 	
-	const ferfa float64 = 0.20
+	const ferfa float64 = 0.28
 	forexCharge := ferfa * unitsReq
 	
 	const wrma float64 = 0.05
@@ -173,7 +173,7 @@ func subsequentCharges(unitsReq float64, unitsCharge float64) (float64, float64,
 	const fcc float64 = 7.22
 	fuelCharge := fcc * unitsReq
 	
-	const ferfa float64 = 0.20
+	const ferfa float64 = 0.28
 	forexCharge := ferfa * unitsReq
 	
 	const wrma float64 = 0.05
