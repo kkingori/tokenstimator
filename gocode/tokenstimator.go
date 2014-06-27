@@ -28,7 +28,7 @@ func unitsCost(unitsReq float64) (unitsCost, firstBandCost, secondBandCost, thir
 		firstBand := 50.0
 		firstBandCost := firstBand * 2.50
 		secondBand := unitsReq - 50
-		secondBandCost := secondBand * 11.62
+		secondBandCost := secondBand * 13.86
 		unitsCost := firstBandCost + secondBandCost
 		thirdBand := 0.0
 		return unitsCost, firstBandCost,secondBandCost, thirdBandCost, firstBand, secondBand, thirdBand
@@ -37,9 +37,9 @@ func unitsCost(unitsReq float64) (unitsCost, firstBandCost, secondBandCost, thir
 		firstBand := 50.0
 		firstBandCost := firstBand * 2.50
 		secondBand := 1500.0 - firstBand
-		secondBandCost := secondBand * 11.62
+		secondBandCost := secondBand * 13.86
 		thirdBand := unitsReq - 1500
-		thirdBandCost := thirdBand * 19.57
+		thirdBandCost := thirdBand * 21.57
 		unitsCost := firstBandCost + secondBandCost + thirdBandCost
 		return unitsCost, firstBandCost,secondBandCost, thirdBandCost, firstBand, secondBand, thirdBand
 	
@@ -66,7 +66,7 @@ func unitsPreviousCost(unitsPrevious float64) (unitsPreviousCost float64) {
 		firstBand := 50.0
 		firstBandCost := firstBand * 2.50
 		secondBand := unitsPrevious - 50
-		secondBandCost := secondBand * 11.62
+		secondBandCost := secondBand * 13.86
 		unitsPreviousCost := firstBandCost + secondBandCost
 	//	thirdBand := 0.0
 	//	return unitsCost, firstBandCost,secondBandCost, thirdBandCost, firstBand, secondBand, thirdBand
@@ -76,9 +76,9 @@ func unitsPreviousCost(unitsPrevious float64) (unitsPreviousCost float64) {
 		firstBand := 50.0
 		firstBandCost := firstBand * 2.50
 		secondBand := 1500.0 - firstBand
-		secondBandCost := secondBand * 11.62
+		secondBandCost := secondBand * 13.86
 		thirdBand := unitsPrevious - 1500
-		thirdBandCost := thirdBand * 19.57
+		thirdBandCost := thirdBand * 21.57
 		unitsPreviousCost := firstBandCost + secondBandCost + thirdBandCost
 	//	return unitsCost, firstBandCost,secondBandCost, thirdBandCost, firstBand, secondBand, thirdBand
 	return unitsPreviousCost
@@ -105,7 +105,7 @@ func unitsReqCost(unitsReq float64) (unitsReqCost float64) {
 		firstBand := 50.0
 		firstBandCost := firstBand * 2.50
 		secondBand := unitsReq - 50
-		secondBandCost := secondBand * 11.62
+		secondBandCost := secondBand * 13.86
 		unitsReqCost := firstBandCost + secondBandCost
 	//	thirdBand := 0.0
 	//	return unitsCost, firstBandCost,secondBandCost, thirdBandCost, firstBand, secondBand, thirdBand
@@ -115,9 +115,9 @@ func unitsReqCost(unitsReq float64) (unitsReqCost float64) {
 		firstBand := 50.0
 		firstBandCost := firstBand * 2.50
 		secondBand := 1500.0 - firstBand
-		secondBandCost := secondBand * 11.62
+		secondBandCost := secondBand * 13.86
 		thirdBand := unitsReq - 1500
-		thirdBandCost := thirdBand * 19.57
+		thirdBandCost := thirdBand * 21.57
 		unitsReqCost := firstBandCost + secondBandCost + thirdBandCost
 	//	return unitsCost, firstBandCost,secondBandCost, thirdBandCost, firstBand, secondBand, thirdBand
 	return unitsReqCost
@@ -150,12 +150,12 @@ func charges(unitsReq float64, unitsCharge float64) (float64, float64, float64, 
 	const rep float64 = 0.05
 	repCharge := rep * unitsCharge
 	
-	var fixedCharge float64 = 120.00
+	var fixedCharge float64 = 150.00
 	
 	// Used this segment on a command line confirmation of first purchase. May be useful in the future.
 	/*
 	if askForConfirmation() == true {
-		fixedCharge = 120.00
+		fixedCharge = 150.00
 	} else {
 		fixedCharge = 0.00
 	}
@@ -193,7 +193,7 @@ func subsequentCharges(unitsReq float64, unitsCharge float64) (float64, float64,
 	// Used this segment on a command line confirmation of first purchase. May be useful in the future.
 	/*
 	if askForConfirmation() == true {
-		fixedCharge = 120.00
+		fixedCharge = 150.00
 	} else {
 		fixedCharge = 0.00
 	}
