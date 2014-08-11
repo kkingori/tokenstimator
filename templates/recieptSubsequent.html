@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +18,9 @@
     <!-- Custom styles for this template -->
     <link href="/css/jumbotron-narrow.css" rel="stylesheet">
 
+    <!-- Font Awesome by Dave Gandy - http://fontawesome.io -->
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -24,24 +29,27 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body>
 
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="/faq">FAQ</a></li>
-        </ul>
-        <h3 class="text-muted">Tokenstimator</h3>
-      </div>
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="/">Home</a>
+                </li>
+                <li><a href="/faq">FAQ</a>
+                </li>
+            </ul>
+            <h3 class="text-muted">Tokenstimator</h3>
+        </div>
 
-      <div class="jumbotron">
-        <h2>Expectations == Managed</h2>
-        <p class="lead"> Take the guesswork out of kplc prepaid token purchase. Tokenstimate instead and pay for only what you <strong>might</strong> get!</p>
-      </div>
-	  <!--
+        <div class="jumbotron">
+            <h2>Expectations == Managed</h2>
+            <p class="lead">Take the guesswork out of kplc prepaid token purchase. Tokenstimate instead and pay for only what you
+                <strong>might</strong>get!</p>
+        </div>
+        <!--
 	  <div class='table-responsive'>
 		  <h3 class="text-center"> Unit Costs Breakdown</h3>
 		  <table class="table table-bordered">
@@ -79,113 +87,145 @@
 	  </div>
 	  <br>
 		  -->
-	  <div class="table-responsive">
-		  <h3 class="text-center"> Total Costs Breakdown </h3>
-		  <table class="table table-bordered">
-			  <tr>
-				  <td></td>
-				  <td></td>
-				  <td></td>
-				  <td class="active"><strong> Concept </strong></td>
-				  <td class="active"><strong> Charges (Kshs) </strong></td>
-			  </tr>
-			  <tr class="active">
-				  <td><strong> Charge </strong></td>
-				  <td><strong> Rate </strong></td>
-				  <td><strong> kWh purchased </strong></td>
-				  <td><strong> Fixed Charge </strong></td>
-				  <td>{{.Fixed}}</td> 
-			  </tr>
-			  <tr>
-				  <td></td>
-				  <td></td>
-				  <td>{{.UnitsReq}}</td>
-				  <td></td>
-				  <td>{{.UnitsCost}}</td>
-			  </tr>
-			  <tr>
-				  <td> Fuel Index Charge </td>
-				  <td>sh. 7.22/kWh</td>
-				  <td></td>
-				  <td></td>
-				  <td>{{.Fuel}}</td>
-			  </tr>
-			  <tr>
-				  <td> Forex Fluctuation Adjustment </td>
-				  <td> sh. 0.30/kWh</td>
-				  <td></td>
-				  <td></td>
-				  <td>{{.Forex}}</td>
-			  </tr>
-			  <tr>
-				  <td>Inflation Adjustment</td>
-				  <td> sh. 0.18/kWh </td>
-				  <td></td>
-				  <td></td>
-				  <td>{{.Inflation}}</td>
-			  </tr>
-			  <td><abbr title="Water Resources Management Authority">WRMA Levy</abbr></td>
-			  	<td> sh. 0.06/kWh</td>
-			  	<td></td>
-			  	<td></td>
-			  	<td>{{.Wrma}}</td>
-			  <tr>
-				  <td><abbr title="Rural Electrification Programme"> REP Levy</abbr></td>
-				  <td> 5%</td>
-				  <td></td>
-				  <td></td>
-				  <td>{{.Rep}}</td>
-			  </tr>
-			  <tr>
-				  <td><abbr title="Energy Regulatory Commission"> ERC Levy </abbr></td>
-				  <td>sh. 0.03/kWh</td>
-				  <td></td>
-				  <td></td>
-				  <td>{{.Erc}}</td>
-			  </tr>
-			  <tr>
-				  <td><abbr title="Value Added Tax"> VAT </abbr></td>
-				  <td> 16%</td>
-				  <td></td>
-				  <td></td>
-				  <td>{{.Vat}}</td>
-			  </tr>
-			  <tr>
-				  <td></td>
-				  <td></td>
-				  <td></td>
-				  <td class="info"> Total Cost </td>
-				  <td class="info">{{.Total}}</td>
-			  </tr>
-			  <tr></tr>
-		  </table>
-	  </div>
-	  <br>
-	  <div class="centered">
-		  <ul>
-			  <li> Applies only to domestic consumers and whose consumption does not exceed 15,000 Units per pre-paid units purchase period. </li>
-		  </ul>
-	  </div>
-      <div class="footer">
-        <p><a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3 </a>| <a href="http://github.com/kkingori/tokenstimator">Fork me on Github</a></p> 
-      </div>
+        <div class="table-responsive">
+            <h3 class="text-center">Total Costs Breakdown</h3>
+            <table class="table table-bordered">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="active">
+                        <strong>Concept</strong>
+                    </td>
+                    <td class="active">
+                        <strong>Charges (Kshs)</strong>
+                    </td>
+                </tr>
+                <tr class="active">
+                    <td>
+                        <strong>Charge</strong>
+                    </td>
+                    <td>
+                        <strong>Rate</strong>
+                    </td>
+                    <td>
+                        <strong>kWh purchased</strong>
+                    </td>
+                    <td>
+                        <strong>Fixed Charge</strong>
+                    </td>
+                    <td>{{.Fixed}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>{{.UnitsReq}}</td>
+                    <td></td>
+                    <td>{{.UnitsCost}}</td>
+                </tr>
+                <tr>
+                    <td>Fuel Index Charge</td>
+                    <td>sh. 7.22/kWh</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{.Fuel}}</td>
+                </tr>
+                <tr>
+                    <td>Forex Fluctuation Adjustment</td>
+                    <td>sh. 0.30/kWh</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{.Forex}}</td>
+                </tr>
+                <tr>
+                    <td>Inflation Adjustment</td>
+                    <td>sh. 0.18/kWh</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{.Inflation}}</td>
+                </tr>
+                <td>
+                    <abbr title="Water Resources Management Authority">WRMA Levy</abbr>
+                </td>
+                <td>sh. 0.06/kWh</td>
+                <td></td>
+                <td></td>
+                <td>{{.Wrma}}</td>
+                <tr>
+                    <td>
+                        <abbr title="Rural Electrification Programme">REP Levy</abbr>
+                    </td>
+                    <td>5%</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{.Rep}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <abbr title="Energy Regulatory Commission">ERC Levy</abbr>
+                    </td>
+                    <td>sh. 0.03/kWh</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{.Erc}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <abbr title="Value Added Tax">VAT</abbr>
+                    </td>
+                    <td>16%</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{.Vat}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="info">Total Cost</td>
+                    <td class="info">{{.Total}}</td>
+                </tr>
+                <tr></tr>
+            </table>
+        </div>
+        <br>
+        <div class="centered">
+            <ul>
+                <li>Applies only to domestic consumers and whose consumption does not exceed 15,000 Units per pre-paid units purchase period.</li>
+            </ul>
+        </div>
+        <p class="text-center">
+            <a href="http://github.com/kkingori/tokenstimator">
+                <i class="fa fa-github fa-3x"></i>
+            </a>
+        </p>
+    </div>
 
-    </div> <!-- /container -->
+    </div>
+    <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-52351668-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-52351668-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 
-</script>
-  
 
-</body></html>
+</body>
+
+</html>
