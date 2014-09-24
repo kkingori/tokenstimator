@@ -15,8 +15,19 @@
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
 
+
+
+    <!-- Material Design CSS-->
+    <link href="/css/material.css" rel="stylesheet">
+    <link href="/css/material-wfont.css" rel="stylesheet">
+    <link href="/css/ripples.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+
 
     <!-- Font Awesome by Dave Gandy - http://fontawesome.io -->
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
@@ -34,76 +45,106 @@
 <body>
 
     <div class="container">
-        <div class="header">
-            <ul class="nav nav-pills pull-right">
-                <li class="active"><a href="/">Home</a>
-                </li>
-                <li><a href="/faq">FAQ</a>
-                </li>
-            </ul>
-            <h3 class="text-muted">Tokenstimator</h3>
+
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Tokenstimator</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div class="jumbotron">
             <h2>Manage expectations</h2>
             <p class="lead">Take the guesswork out of kplc prepaid token purchase. Tokenstimate instead and pay for only what you
-                <strong>might</strong>get!</p>
+                <strong>might</strong>&nbspget!</p>
         </div>
-        <div class="container">
-            <form role="form" class="col-xs-6 col-xs-offset-3" action="/subsequent" method="post">
-
-                <!-- <div class="form-group">
-        <div class="input-group">
-          <span class="input-group-addon">Previous Units </span>
-          <input type="text" class="form-control" name="unitsPrevious" placeholder="0.00">
-        </div>    
-      </div>
-      <div class="form-group">
-        <div class="input-group">
-          <span class="input-group-addon"> Units Wanted? </span>
-          <input type="text" class="form-control" name="unitsReq" placeholder="0.00">
-        </div>    
-      </div>
-        -->
-                <div class="form-group">
-                    <label>How many units have you purchased cummulatively in the current month?</label>
-                </div>
-                <div>
-                    <input type="text" class="form-control" placeholder="0.0" name="unitsPrevious">
-                </div>
-                <br>
-                <div class="form-group">
-                    <label>How many units do you want?</label>
-                </div>
-                <div>
-                    <input type="text" class="form-control" placeholder="0.0" name="unitsReq">
-                </div>
-                <br>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary col-xs-4 col-xs-offset-2">Go</button>
-                </div>
-
-
-            </form>
-
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title text-center">How many units have you purchased cumulatively in the current month?</h3>
+            </div>
+            <div class="panel-body">
+                <form role="form" class="form-horizontal" action="/subsequent" method="post">
+                    <div class="form-group">
+                        <label for="unitsPrevious" class="col-lg-2 control-label">Units</label>
+                        <div class="col-lg-10">
+                            <input type="number" required autofocus min="1" max="14999" id="unitsPrevious" class="form-control" placeholder="0.0" name="unitsPrevious">
+                        </div>
+                    </div>
+            </div>
         </div>
         <br>
-        <div class="footer">
-            <p class="text-center">
-                <a href="http://github.com/kkingori/tokenstimator">
-                    <i class="fa fa-github fa-3x"></i>
-                </a>
-            </p>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title text-center">How many units do you want?</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="unitsReq" class="col-lg-2 control-label">Units</label>
+                    <div class="col-lg-10">
+                        <input type="number" required min="1" max="15000" id="unitsReq" class="form-control" placeholder="0.0" name="unitsReq">
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Go</button>
+                </div>
+
+
+                </form>
+            </div>
         </div>
+    </div>
+    <br>
+    <div class="footer">
+        <p class="text-center">
+            <a href="http://github.com/kkingori/tokenstimator">
+                <i class="fa fa-github fa-3x"></i>
+            </a>
+        </p>
+    </div>
 
     </div>
     <!-- /container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
+
+     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
+    <!-- Material design javascript-->
+    <script src="/js/material.js"></script>
+    <script src="/js/ripples.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-52351668-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 
 </body>
 

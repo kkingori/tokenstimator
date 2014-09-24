@@ -10,13 +10,24 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
 
-    <title>Tokenstimator : About</title>
+    <title>Tokenstimator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
 
+
+
+    <!-- Material Design CSS-->
+    <link href="/css/material.css" rel="stylesheet">
+    <link href="/css/material-wfont.css" rel="stylesheet">
+    <link href="/css/ripples.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+
 
     <!-- Font Awesome by Dave Gandy - http://fontawesome.io -->
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
@@ -34,17 +45,27 @@
 <body>
 
     <div class="container">
-        <div class="header">
-            <ul class="nav nav-pills pull-right">
-                <li><a href="/">Home</a>
-                </li>
-                <li class="active"><a href="/faq">FAQ</a>
-                </li>
-            </ul>
-            <h3 class="text-muted">Tokenstimator</h3>
+
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Tokenstimator</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="/faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div class="container">
+
+        <div class="panel panel-info">
             <ol>
                 <li>
                     <h4>Did you make up all this costs, charges and levies?</h4>
@@ -60,13 +81,13 @@
                 <li>
                     <h4>My friend told me I'll get a better deal if I buy units in bundles of 50 three times to get 150 units instead of a one time purchase of 150 units. Is this true?</h4>
                     <p>
-                        Eh, No. The KPLC system keeps a record of all previous purchases. Buying 150 units at a go gives you the same number of units as buying bundles of 50 units three times. Conducting 3 transactions might even be more expensive due to the transaction costs charged for each bundle of 50 so you will might end up with even less units for a similar amount.
+                        Eh, No. The KPLC system keeps a record of all previous purchases. Buying 150 units at a go gives you the same number of units as buying bundles of 50 units three times. Conducting 3 transactions might even be more expensive due to the transaction costs charged for each bundle of 50 so you will end up with even less units for a similar amount.
                     </p>
                 </li>
                 <li>
                     <h4>Where can I get a cost breakdown for my actual purchase?</h4>
                 </li>
-                <p>Physical vendors e.g kplc offices, neighborhood vendors e.t.c provide a reciept with the itemised charges. Online vendors such as <a href="http://www.kenyapowertokens.com" target="_blank">www.kenyapowertokens.com</a> provide a breakdown of charges for previous purchases transacted through them. Unfortunately mobile money purchases do not provide an itemised reciept.</p>
+                <p>Some physical vendors e.g kplc offices provide a reciept with the itemised charges. Online vendors such as <a href="http://www.kenyapowertokens.com" target="_blank">www.kenyapowertokens.com</a> provide a breakdown of charges for previous purchases transacted through them. Unfortunately mobile money purchases do not provide an itemised reciept.</p>
                 </li>
                 <li>
                     <h4>How can I help?</h4>
@@ -88,10 +109,20 @@
     </div>
     <!-- /container -->
 
-
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
+
+     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
+    <!-- Material design javascript-->
+    <script src="/js/material.js"></script>
+    <script src="/js/ripples.js"></script>
+
+    <!-- Google Analytics -->
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -108,7 +139,6 @@
     ga('create', 'UA-52351668-1', 'auto');
     ga('send', 'pageview');
     </script>
-
 
 </body>
 

@@ -1,11 +1,15 @@
 application: tokenstimator
-version: 2
+version: 3
 runtime: go
 api_version: go1
 
 handlers:
 - url: /css
   static_dir: templates/css
+
+handlers:
+- url: /js
+  static_dir: templates/js  
 
 - url: /.*
   script: _go_app
