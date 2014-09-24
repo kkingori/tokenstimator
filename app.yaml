@@ -7,7 +7,6 @@ handlers:
 - url: /css
   static_dir: templates/css
 
-handlers:
 - url: /js
   static_dir: templates/js  
 
