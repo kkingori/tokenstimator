@@ -132,7 +132,7 @@ func unitsReqCost(unitsReq float64) (unitsReqCost float64) {
 
 //This function calculates the various charges and levies.
 func charges(unitsReq float64, unitsCharge float64) (float64, float64, float64, float64, float64, float64, float64, float64) {
-	const fcc float64 = 4.79
+	const fcc float64 = 3.47
 	fuelCharge := fcc * unitsReq
 	
 	const ferfa float64 = 0.23
@@ -170,7 +170,7 @@ func charges(unitsReq float64, unitsCharge float64) (float64, float64, float64, 
 
 //This function calculates the various charges and levies.
 func subsequentCharges(unitsReq float64, unitsCharge float64) (float64, float64, float64, float64, float64, float64, float64, float64) {
-	const fcc float64 = 4.79
+	const fcc float64 = 3.47
 	fuelCharge := fcc * unitsReq
 	
 	const ferfa float64 = 0.23
