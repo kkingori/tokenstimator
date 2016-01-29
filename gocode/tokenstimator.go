@@ -39,7 +39,7 @@ func unitsCost(unitsReq float64) (unitsCost, firstBandCost, secondBandCost, thir
 		secondBand := 1500.0 - firstBand
 		secondBandCost := secondBand * 12.75
 		thirdBand := unitsReq - 1500
-		thirdBandCost := thirdBand * 21.57
+		thirdBandCost := thirdBand * 20.57
 		unitsCost := firstBandCost + secondBandCost + thirdBandCost
 		return unitsCost, firstBandCost,secondBandCost, thirdBandCost, firstBand, secondBand, thirdBand
 	
@@ -78,7 +78,7 @@ func unitsPreviousCost(unitsPrevious float64) (unitsPreviousCost float64) {
 		secondBand := 1500.0 - firstBand
 		secondBandCost := secondBand * 12.75
 		thirdBand := unitsPrevious - 1500
-		thirdBandCost := thirdBand * 21.57
+		thirdBandCost := thirdBand * 20.57
 		unitsPreviousCost := firstBandCost + secondBandCost + thirdBandCost
 	//	return unitsCost, firstBandCost,secondBandCost, thirdBandCost, firstBand, secondBand, thirdBand
 	return unitsPreviousCost
@@ -117,7 +117,7 @@ func unitsReqCost(unitsReq float64) (unitsReqCost float64) {
 		secondBand := 1500.0 - firstBand
 		secondBandCost := secondBand * 12.75
 		thirdBand := unitsReq - 1500
-		thirdBandCost := thirdBand * 21.57
+		thirdBandCost := thirdBand * 20.57
 		unitsReqCost := firstBandCost + secondBandCost + thirdBandCost
 	//	return unitsCost, firstBandCost,secondBandCost, thirdBandCost, firstBand, secondBand, thirdBand
 	return unitsReqCost
